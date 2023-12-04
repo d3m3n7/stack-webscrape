@@ -1,6 +1,5 @@
-import requests
+from scraping.scraping import Scraping
 
 if __name__ == "__main__":
-    url = "https://news.ycombinator.com/"
-    response = requests.get(url)
-    print(response.content)
+    html = Scraping.get_html(url=Scraping.get_url())
+    print(html)

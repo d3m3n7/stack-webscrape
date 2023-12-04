@@ -48,3 +48,21 @@ Before committing we use an opinionated formatter to maintain style within .py f
 ```bash
 black .
 ```
+
+# Testing
+You can run `py.test tests -vv -s`
+
+## By file
+`pytest tests/test_analisis.py`
+
+`pytest tests/test_cache.py`
+
+## Options
+Option -x
+
+Option -s
+
+Option -vv
+
+`pytest tests/test_analisis.py -vv -s -x`
+`pytest tests/test_cache.py -vv -s -x`
