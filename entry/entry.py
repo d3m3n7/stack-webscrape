@@ -4,5 +4,13 @@ class Entry:
     ):
         self.title = title
         self.order = order
-        self.n_comments = n_comments
-        self.points = points
+        self.n_comments = n_comments if n_comments is not None else 0
+        self.points = points if points is not None else 0
+
+    def to_dict(self) -> dict:
+        return dict(
+            title=self.title,
+            order=self.order,
+            n_comments=self.n_comments,
+            points=self.points,
+        )
